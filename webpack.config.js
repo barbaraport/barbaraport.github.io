@@ -7,8 +7,7 @@ const __dirname = path.dirname(__filename);
 
 export default {
   mode: "development",
-  entry: "./main.tsx",
-  devtool: "inline-source-map",
+  entry: "./src/main.tsx",
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "bundle.js",
@@ -19,11 +18,6 @@ export default {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: "babel-loader",
-      },
-      {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: "ts-loader",
@@ -31,11 +25,11 @@ export default {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: "./src/index.html",
     }),
   ],
 };
