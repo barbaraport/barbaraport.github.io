@@ -1,14 +1,33 @@
 {
   "compilerOptions": {
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": false,
+    "skipLibCheck": true,
     "jsx": "react-jsx",
     "outDir": "./dist/",
     "sourceMap": true,
-    "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
     "allowJs": false,
     "moduleResolution": "node",
-    "removeComments": true
-  },
-  "exclude": ["node_modules"]
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }
