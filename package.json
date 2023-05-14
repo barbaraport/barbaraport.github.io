@@ -7,7 +7,7 @@
   },
   "main": "main.tsx",
   "scripts": {
-    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "lint": "npx tsc && eslint --ignore-path .eslintignore --ext .js,.ts .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run lint && webpack-dev-server --open --mode development --hot",
     "deploy": "npm run lint && webpack --mode production"
