@@ -7,7 +7,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 type MyAccordionProps = {
   disabled: boolean;
   title: string;
-  text: string;
+  text: Array<string>;
 };
 
 export function MyAccordion(props: MyAccordionProps): JSX.Element {
@@ -20,9 +20,17 @@ export function MyAccordion(props: MyAccordionProps): JSX.Element {
       >
         <Typography>{props.title}</Typography>
       </AccordionSummary>
-      <AccordionDetails>
-        <Typography>{props.text}</Typography>
-      </AccordionDetails>
+      <AccordionDetails>{formatParagraphs()}</AccordionDetails>
     </Accordion>
   );
+
+  function formatParagraphs(): Array<JSX.Element> {
+    const paragraphs: Array<JSX.Element> = [];
+
+    props.text.forEach((paragraph: string) => {
+      paragraphs.push(<Typography>{paragraph}</Typography>);
+    });
+
+    return paragraphs;
+  }
 }

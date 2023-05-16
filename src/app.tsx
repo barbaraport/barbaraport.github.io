@@ -1,7 +1,7 @@
 import Container from "@mui/material/Container";
 import { MyAvatar } from "./components/avatar";
 import { Grid, Typography } from "@material-ui/core";
-import { AboutMe } from "./components/aboutme/aboutme";
+import { AboutMe } from "./components/aboutMe";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         justifyContent="center"
         alignItems="center"
         alignContent="center"
-        wrap="nowrap"
+        style={{ width: "100%" }}
       >
         <MyAvatar />
         <Typography variant="subtitle1" color="textPrimary">
