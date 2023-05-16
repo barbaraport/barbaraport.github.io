@@ -34,7 +34,6 @@ export function AboutMe(): JSX.Element {
           "Studious (I always increase my knowledge and I always search for the best trainings for this purpose).",
         ]}
       />
-      <MyAccordion disabled={true} title="Work Experience" text={["..."]} />
       <MyAccordion disabled={true} title="Education" text={["..."]} />
       <MyAccordion disabled={true} title="Languages" text={["..."]} />
       <MyAccordion disabled={true} title="Honors" text={["..."]} />
