@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import { MyAccordion } from "../../elements/myAccordion";
+import CheckBoxTwoToneIcon from '@mui/icons-material/CheckBoxTwoTone';
 
 export function AboutMe(): JSX.Element {
   return (
@@ -25,6 +26,7 @@ export function AboutMe(): JSX.Element {
           "Selenium/Cypress (consulting and development of automated tests);",
           "Cucumber/Gherkin (knowledge in development of automated specifications).",
         ]}
+        paragraphIcon={<CheckBoxTwoToneIcon/>}
       />
       <MyAccordion
         disabled={false}
@@ -36,6 +38,7 @@ export function AboutMe(): JSX.Element {
           "Detail-oriented (in development, in communication and in life I always pay close attention to all information I have or receive);",
           "Studious (I always increase my knowledge and I always search for the best trainings for this purpose).",
         ]}
+        paragraphIcon={<CheckBoxTwoToneIcon/>}
       />
     </Box>
   );
