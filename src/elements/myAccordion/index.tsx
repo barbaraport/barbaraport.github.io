@@ -34,15 +34,15 @@ export function MyAccordion(props: MyAccordionProps): JSX.Element {
       
       const text: JSX.Element = <Typography>{paragraph}</Typography>;
 
-      if (!props.paragraphIcon)
-        paragraphs.push(text);
+      if (props.paragraphIcon)
+        paragraphs.push(
+          <Box display={'flex'} flexDirection={'row'} gap={'8px'}>
+            {props.paragraphIcon}
+            {text}
+          </Box>
+        ); 
+      else paragraphs.push(text);
 
-      paragraphs.push(
-        <Box display={'flex'} flexDirection={'row'} gap={'8px'}>
-          {props.paragraphIcon}
-          {text}
-        </Box>
-      ); 
     });
 
     return paragraphs;
