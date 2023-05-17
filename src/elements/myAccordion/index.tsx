@@ -6,13 +6,14 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 type MyAccordionProps = {
   disabled: boolean;
+  defaultExpanded: boolean;
   title: string;
   text: Array<string>;
 };
 
 export function MyAccordion(props: MyAccordionProps): JSX.Element {
   return (
-    <Accordion disabled={props.disabled}>
+    <Accordion disabled={props.disabled} defaultExpanded={props.defaultExpanded}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel2a-content"

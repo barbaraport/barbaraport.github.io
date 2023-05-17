@@ -6,6 +6,7 @@ export function AboutMe(): JSX.Element {
     <Box sx={{ width: "100%" }}>
       <MyAccordion
         disabled={false}
+        defaultExpanded={true}
         title="About me"
         text={[
           "I am an experienced software developer contributing with software solutions of excellent quality, a thought that has accompanied me from an early age and provided me with two Honorable Mentions in educational institutions I went through.",
@@ -13,6 +14,7 @@ export function AboutMe(): JSX.Element {
       />
       <MyAccordion
         disabled={false}
+        defaultExpanded={false}
         title="Hard Skills"
         text={[
           "Java 8 (complex business logic development);",
@@ -26,6 +28,7 @@ export function AboutMe(): JSX.Element {
       />
       <MyAccordion
         disabled={false}
+        defaultExpanded={false}
         title="Soft Skills"
         text={[
           "Communicative (experience acquired while developing projects remotely with agile methodologies and the language cannot be a barrier);",
