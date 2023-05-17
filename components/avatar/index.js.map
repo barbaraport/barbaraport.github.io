@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/components/avatar/index.tsx"],"names":[],"mappings":";AAAA,OAAO,MAAM,MAAM,sBAAsB,CAAC;AAO1C,MAAM,CAAC,IAAM,QAAQ,GAAG;IACtB,IAAM,UAAU,GAAe;QAC7B,KAAK,EAAE,MAAM;QACb,MAAM,EAAE,MAAM;KACf,CAAC;IAEF,OAAO,CACL,KAAC,MAAM,IACL,GAAG,EAAC,mBAAc,EAClB,GAAG,EAAC,sDAAsD,EAC1D,EAAE,EAAE,UAAU,GACd,CACH,CAAC;AACJ,CAAC,CAAA"}
