@@ -13,21 +13,9 @@ type MyAccordionProps = {
   paragraphIcon?: JSX.Element;
 };
 
-export function MyAccordion(props: MyAccordionProps): JSX.Element {
-  return (
-    <Accordion disabled={props.disabled} defaultExpanded={props.defaultExpanded}>
-      <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
-        aria-controls="panel2a-content"
-        id="panel2a-header"
-      >
-        <Typography>{props.title}</Typography>
-      </AccordionSummary>
-      <AccordionDetails>{formatParagraphs()}</AccordionDetails>
-    </Accordion>
-  );
+export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
 
-  function formatParagraphs(): Array<JSX.Element> {
+  const formatParagraphs = (): Array<JSX.Element> => {
     const paragraphs: Array<JSX.Element> = [];
 
     props.text.forEach((paragraph: string) => {
@@ -47,4 +35,17 @@ export function MyAccordion(props: MyAccordionProps): JSX.Element {
 
     return paragraphs;
   }
+
+  return (
+    <Accordion disabled={props.disabled} defaultExpanded={props.defaultExpanded}>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel2a-content"
+        id="panel2a-header"
+      >
+        <Typography>{props.title}</Typography>
+      </AccordionSummary>
+      <AccordionDetails>{formatParagraphs()}</AccordionDetails>
+    </Accordion>
+  );
 }

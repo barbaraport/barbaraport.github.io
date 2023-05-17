@@ -5,7 +5,7 @@ type AvatarSize = {
   height: string;
 };
 
-export function MyAvatar(): JSX.Element {
+export const MyAvatar = (): JSX.Element => {
   const avatarSize: AvatarSize = {
     width: "20vh",
     height: "20vh",

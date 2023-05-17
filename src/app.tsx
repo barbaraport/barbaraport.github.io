@@ -3,7 +3,7 @@ import { MyAvatar } from "./components/avatar";
 import { Grid, Typography } from "@material-ui/core";
 import { AboutMe } from "./components/aboutMe";
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <Container>
       <Grid

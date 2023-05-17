@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { MyAccordion } from "../../elements/myAccordion";
 import CheckBoxTwoToneIcon from '@mui/icons-material/CheckBoxTwoTone';
 
-export function AboutMe(): JSX.Element {
+export const AboutMe = (): JSX.Element => {
   return (
     <Box sx={{ width: "100%" }}>
       <MyAccordion
