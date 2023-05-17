@@ -10,7 +10,7 @@
     "lint": "npx tsc && eslint --ignore-path .eslintignore --ext .js,.ts .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run lint && webpack-dev-server --open --mode development --hot",
-    "deploy": "npm run lint && webpack --mode production"
+    "deploy": "npm run lint && webpack --mode production && gh-pages -d dist"
   },
   "author": "Bárbara dos Santos Port",
   "license": "ISC",
