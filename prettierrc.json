@@ -1,6 +1,7 @@
 {
+  "trailingComma": "es5",
+  "tabWidth": 4,
   "semi": false,
   "singleQuote": false,
-  "arrowParens": "avoid",
-  "typedef": [true, "variable-declaration"]
+  "arrowParens": "avoid"
 }
