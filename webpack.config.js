@@ -26,6 +26,10 @@ export default {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(svg|png|jpg|jpeg|gif|ico)$/,
+        exclude: /node_modules/,
+      }
     ],
   },
   resolve: {
@@ -34,6 +38,7 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      favicon: "./src/favicon.ico"
     }),
   ],
 };
