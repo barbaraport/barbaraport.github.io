@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run lint && webpack-dev-server --open --mode development --hot",
     "deploy": "npm run lint && webpack --mode production",
-    "deploy --gh": "npm run deploy && gh-pages -d dist"
+    "deploy:gh": "npm run deploy && gh-pages -d dist"
   },
   "author": "Bárbara dos Santos Port",
   "license": "ISC",
