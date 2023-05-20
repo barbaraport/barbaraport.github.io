@@ -24,8 +24,12 @@ jobs:
             with:
               node-version: ${{ matrix.node-version }}
               cache: 'npm'
-          - run: npm ci
-          - run: npx tsc
-          - run: npm run test
-          - run: npm run lint
-          - run: npm run deploy --if-present
+            run: npm ci
+          - name: Compile
+            run: npx tsc
+          - name: Run tests
+            run: npm run test
+          - name: Run lint verifications
+            run: npm run lint
+          - name: Build project
+            run: npm run deploy --if-present
