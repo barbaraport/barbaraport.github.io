@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
+      - run: npm install --legacy-peer-deps
       - run: npx tsc
 
   lint:
@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
+      - run: npm install --legacy-peer-deps
       - run: npm run lint
 
   test:
@@ -52,7 +52,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
+      - run: npm install --legacy-peer-deps
       - run: npm run test
 
   deploy:
@@ -68,5 +68,5 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
+      - run: npm install --legacy-peer-deps
       - run: npm run deploy
