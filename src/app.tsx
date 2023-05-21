@@ -21,7 +21,7 @@ const App = (): JSX.Element => {
             style={{ width: "100%" }}
           >
             <MyAvatar/>
-            <Text text='Bárbara Port'/>
+            <Text type='body1' text='Bárbara Port'/>
             <AboutMe/>
           </Grid>
         </Container>

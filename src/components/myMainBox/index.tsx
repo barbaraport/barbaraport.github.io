@@ -12,7 +12,9 @@ export const MyMainBox = (): JSX.Element => {
             alignSelf: 'center',
             alignItems: 'center'
             }}>
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor porttitor tortor non pulvinar."></Text>
+            <Text 
+            type="h1"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor porttitor tortor non pulvinar."></Text>
         </Box>
     );
 }
