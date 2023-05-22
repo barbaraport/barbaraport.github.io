@@ -5,7 +5,6 @@ export const MyMainBox = (): JSX.Element => {
 
     return (
         <Box sx={{
-            backgroundColor:'pink', 
             width:'100%', 
             height: '100vh',
             display: 'flex', 
@@ -14,7 +13,7 @@ export const MyMainBox = (): JSX.Element => {
             }}>
             <Text 
             type="h1"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor porttitor tortor non pulvinar."></Text>
+            text="Are you looking for an experienced software developer?"></Text>
         </Box>
     );
 }
