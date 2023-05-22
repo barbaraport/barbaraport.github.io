@@ -4,11 +4,13 @@ import { Grid } from "@material-ui/core";
 import { AboutMe } from "./components/aboutMe";
 import { Text } from "./elements/text";
 import { MyMainBox } from "./components/myMainBox";
-import { Box } from "@mui/material";
+import { Box, ThemeProvider } from "@mui/material";
+import { theme } from "./theme";
 
 const App = (): JSX.Element => {
   return (
-      <Box>
+    <ThemeProvider theme={theme}>
+      <Box sx={{backgroundColor:'text.secondary'}}>
         <MyMainBox/>
         <Container>
           <Grid
@@ -26,6 +28,7 @@ const App = (): JSX.Element => {
           </Grid>
         </Container>
       </Box>
+    </ThemeProvider>
   );
 }
 

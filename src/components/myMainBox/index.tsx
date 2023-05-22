@@ -5,6 +5,7 @@ export const MyMainBox = (): JSX.Element => {
 
     return (
         <Box sx={{
+            backgroundColor:'primary.main',
             width:'100%', 
             height: '100vh',
             display: 'flex', 
@@ -12,8 +13,8 @@ export const MyMainBox = (): JSX.Element => {
             alignItems: 'center'
             }}>
             <Text 
-            type="h1"
-            text="Are you looking for an experienced software developer?"></Text>
+                type="h1"
+                text="Are you looking for an experienced software developer?"/>
         </Box>
     );
 }
