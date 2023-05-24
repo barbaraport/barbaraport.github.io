@@ -12,7 +12,7 @@ let theme: Theme = createTheme({
         primary: '#442F38',
         secondary: '#E7F9A9'
     }
-  },
+  }
 });
 
 theme = responsiveFontSizes(theme);

@@ -10,11 +10,11 @@ export const MyMainBox = (): JSX.Element => {
             height: '100vh',
             display: 'flex', 
             alignSelf: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
             }}>
             <Text 
-                type="h1"
-                text="Are you looking for an experienced software developer?"/>
+                type="h2"
+                text="Looking for an skilled software developer?"/>
         </Box>
     );
 }
