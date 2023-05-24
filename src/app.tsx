@@ -5,7 +5,7 @@ import { AboutMe } from "./components/aboutMe";
 import { Text } from "./elements/text";
 import { MyMainBox } from "./components/myMainBox";
 import { Box, ThemeProvider } from "@mui/material";
-import { theme } from "./theme";
+import theme from "./theme";
 
 const App = (): JSX.Element => {
   return (
