@@ -20,7 +20,7 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
 
     props.text.forEach((paragraph: string) => {
       
-      const text: JSX.Element = <Text text={paragraph}/>;
+      const text: JSX.Element = <Text type='body1' text={paragraph}/>;
 
       if (props.paragraphIcon)
         paragraphs.push(
@@ -43,7 +43,7 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
         aria-controls="panel2a-content"
         id="panel2a-header"
       >
-        <Text text={props.title}/>
+        <Text type='body1' text={props.title}/>
       </AccordionSummary>
       <AccordionDetails>{formatParagraphs()}</AccordionDetails>
     </Accordion>

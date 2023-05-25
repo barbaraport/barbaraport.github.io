@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 
 type AvatarSize = {
@@ -12,10 +13,12 @@ export const MyAvatar = (): JSX.Element => {
   };
 
   return (
-    <Avatar
+    <Box>
+      <Avatar
       alt="Bárbara Port"
       src="https://avatars.githubusercontent.com/u/62317075?v=4"
       sx={avatarSize}
     />
+    </Box>
   );
 }
