@@ -17,7 +17,7 @@ export const MyMainBox = (): JSX.Element => {
             }}>
             <Text 
                 type="h2"
-                text="Looking for an skilled software developer?"/>
+                text="Looking for a skilled software developer?"/>
         </Box>
     );
 }
