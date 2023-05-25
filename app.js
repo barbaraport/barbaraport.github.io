@@ -12,10 +12,13 @@ var __assign = (this && this.__assign) || function () {
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import Container from "@mui/material/Container";
 import { MyAvatar } from "./components/avatar";
-import { Grid, Typography } from "@material-ui/core";
 import { AboutMe } from "./components/aboutMe";
+import { Text } from "./elements/text";
+import { MyMainBox } from "./components/myMainBox";
+import { Box, ThemeProvider } from "@mui/material";
+import theme from "./theme";
 var App = function () {
-    return (_jsx(Container, { children: _jsxs(Grid, __assign({ container: true, spacing: 1, direction: "column", justifyContent: "center", alignItems: "center", alignContent: "center", style: { width: "100%" } }, { children: [_jsx(MyAvatar, {}), _jsx(Typography, __assign({ variant: "subtitle1", color: "textPrimary" }, { children: "B\u00E1rbara Port" })), _jsx(AboutMe, {})] })) }));
+    return (_jsx(ThemeProvider, __assign({ theme: theme }, { children: _jsxs(Box, __assign({ sx: { backgroundColor: 'text.secondary' } }, { children: [_jsx(MyMainBox, {}), _jsxs(Container, __assign({ sx: { display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '8px' } }, { children: [_jsx(MyAvatar, {}), _jsx(Text, { type: 'body1', text: 'B\u00E1rbara Port' }), _jsx(AboutMe, {})] }))] })) })));
 };
 export default App;
 //# sourceMappingURL=app.js.map
