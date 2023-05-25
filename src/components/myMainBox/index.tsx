@@ -9,8 +9,11 @@ export const MyMainBox = (): JSX.Element => {
             width:'100%', 
             height: '100vh',
             display: 'flex', 
+            textAlign: 'center',
             alignSelf: 'center',
             alignItems: 'center',
+            alignContent: 'center',
+            justifyContent: 'center'
             }}>
             <Text 
                 type="h2"
