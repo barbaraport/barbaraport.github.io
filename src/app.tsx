@@ -11,7 +11,7 @@ const App = (): JSX.Element => {
     <ThemeProvider theme={theme}>
       <Box sx={{backgroundColor:'text.secondary'}}>
         <MyMainBox/>
-        <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '8px'}}>
             <MyAvatar/>
             <Text type='body1' text='Bárbara Port'/>
             <AboutMe/>

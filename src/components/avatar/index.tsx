@@ -13,7 +13,7 @@ export const MyAvatar = (): JSX.Element => {
   };
 
   return (
-    <Box sx={{margin: '8px'}}>
+    <Box>
       <Avatar
       alt="Bárbara Port"
       src="https://avatars.githubusercontent.com/u/62317075?v=4"
