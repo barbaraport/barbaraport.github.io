@@ -5,11 +5,13 @@ import { Text } from "./elements/text";
 import { MyMainBox } from "./components/myMainBox";
 import { Box, ThemeProvider } from "@mui/material";
 import theme from "./theme";
+import Menu from './components/menu'
 
 const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{backgroundColor:'text.secondary'}}>
+        <Menu/>
         <MyMainBox/>
         <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '8px'}}>
             <MyAvatar/>
