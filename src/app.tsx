@@ -23,8 +23,8 @@ const App = (): JSX.Element => {
                     <MyAvatar />
                     <Text type="body1" text="Bárbara Port" />
                     <AboutMe />
-                    <Footer />
                 </Container>
+                <Footer />
             </Box>
         </ThemeProvider>
     )
