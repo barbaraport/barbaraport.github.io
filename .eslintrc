@@ -9,6 +9,9 @@
   },
   "root": true,
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
@@ -18,5 +21,9 @@
     "plugin:react-hooks/recommended",
     "plugin:react/jsx-runtime",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/consistent-type-definitions": "off"
+  }
 }

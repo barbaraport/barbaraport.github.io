@@ -15,10 +15,10 @@ export const MyAvatar = (): JSX.Element => {
   return (
     <Box>
       <Avatar
-      alt="Bárbara Port"
-      src="https://avatars.githubusercontent.com/u/62317075?v=4"
-      sx={avatarSize}
-    />
+        alt="Bárbara Port"
+        src="https://avatars.githubusercontent.com/u/62317075?v=4"
+        sx={avatarSize}
+      />
     </Box>
   );
-}
+};
