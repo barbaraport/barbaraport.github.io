@@ -1,12 +1,10 @@
-import { Box } from "@mui/material";
-import { Text } from "../../elements/text";
+import { Box } from "@mui/material"
+import { Text } from "../../elements/text"
 
-const Footer = (): JSX.Element => {
+export const Footer = (): JSX.Element => {
     return (
-        <Box>
-            <Text type="body1" text="Hello"/>
+        <Box sx={{ backgroundColor: "primary.main", width: '100vw'}}>
+            <Text type="body1" text="Hello" />
         </Box>
-    );
+    )
 }
-
-export default Footer
