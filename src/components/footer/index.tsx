@@ -10,7 +10,7 @@ export const Footer = (): JSX.Element => {
                 padding: "8px",
             }}
         >
-            <Text type="body1" text="Made with 💖 by Bárbara Port" />
+            <Text type="body1" color="text.secondary" text="Made with 💖 by Bárbara Port" />
         </Box>
     )
 }
