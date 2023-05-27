@@ -1,8 +1,8 @@
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Box } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Box } from "@mui/material";
 import { Text } from "../text";
 
 type MyAccordionProps = {
@@ -14,38 +14,38 @@ type MyAccordionProps = {
 };
 
 export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
-
   const formatParagraphs = (): Array<JSX.Element> => {
     const paragraphs: Array<JSX.Element> = [];
 
     props.text.forEach((paragraph: string) => {
-      
-      const text: JSX.Element = <Text type='body1' text={paragraph}/>;
+      const text: JSX.Element = <Text type="body1" text={paragraph} />;
 
       if (props.paragraphIcon)
         paragraphs.push(
-          <Box display={'flex'} flexDirection={'row'} gap={'8px'}>
+          <Box display={"flex"} flexDirection={"row"} gap={"8px"}>
             {props.paragraphIcon}
             {text}
           </Box>
-        ); 
+        );
       else paragraphs.push(text);
-
     });
 
     return paragraphs;
-  }
+  };
 
   return (
-    <Accordion disabled={props.disabled} defaultExpanded={props.defaultExpanded}>
+    <Accordion
+      disabled={props.disabled}
+      defaultExpanded={props.defaultExpanded}
+    >
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel2a-content"
         id="panel2a-header"
       >
-        <Text type='body1' text={props.title}/>
+        <Text type="body1" text={props.title} />
       </AccordionSummary>
       <AccordionDetails>{formatParagraphs()}</AccordionDetails>
     </Accordion>
   );
-}
+};
