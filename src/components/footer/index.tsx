@@ -1,6 +1,7 @@
 import GitHubIcon from "@mui/icons-material/GitHub"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import { Box } from "@mui/material"
+import IconButton from "@mui/material/IconButton"
 import { Text } from "../../elements/text"
 
 export const Footer = (): JSX.Element => {
@@ -15,8 +16,22 @@ export const Footer = (): JSX.Element => {
             }}
         >
             <Box>
-                <LinkedInIcon color="secondary" />
-                <GitHubIcon color="secondary" />
+                <IconButton
+                    onClick={() =>
+                        (window.location.href =
+                            "https://www.linkedin.com/in/barbaraport/")
+                    }
+                >
+                    <LinkedInIcon color="secondary" />
+                </IconButton>
+                <IconButton
+                    onClick={() =>
+                        (window.location.href =
+                            "https://github.com/barbaraport")
+                    }
+                >
+                    <GitHubIcon color="secondary" />
+                </IconButton>
             </Box>
             <Text
                 type="body1"
