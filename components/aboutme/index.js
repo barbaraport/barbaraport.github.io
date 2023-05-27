@@ -10,9 +10,9 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone";
 import { Box } from "@mui/material";
 import { MyAccordion } from "../../elements/myAccordion";
-import CheckBoxTwoToneIcon from '@mui/icons-material/CheckBoxTwoTone';
 export var AboutMe = function () {
     return (_jsxs(Box, __assign({ sx: { width: "100%" } }, { children: [_jsx(MyAccordion, { disabled: false, defaultExpanded: true, title: "About me", text: [
                     "I am an experienced software developer contributing with software solutions of excellent quality, a thought that has accompanied me from an early age and provided me with two Honorable Mentions in educational institutions I went through.",

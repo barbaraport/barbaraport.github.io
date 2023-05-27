@@ -9,16 +9,13 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import Container from "@mui/material/Container";
-import { MyAvatar } from "./components/avatar";
-import { AboutMe } from "./components/aboutMe";
-import { Text } from "./elements/text";
-import { MyMainBox } from "./components/myMainBox";
-import { Box, ThemeProvider } from "@mui/material";
+import { jsx as _jsx } from "react/jsx-runtime";
+import { ThemeProvider } from "@mui/material";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MyPage } from "./pages/myPage";
 import theme from "./theme";
 var App = function () {
-    return (_jsx(ThemeProvider, __assign({ theme: theme }, { children: _jsxs(Box, __assign({ sx: { backgroundColor: 'text.secondary' } }, { children: [_jsx(MyMainBox, {}), _jsxs(Container, __assign({ sx: { display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '8px' } }, { children: [_jsx(MyAvatar, {}), _jsx(Text, { type: 'body1', text: 'B\u00E1rbara Port' }), _jsx(AboutMe, {})] }))] })) })));
+    return (_jsx(ThemeProvider, __assign({ theme: theme }, { children: _jsx(BrowserRouter, { children: _jsx(Routes, { children: _jsx(Route, { path: "/", element: _jsx(MyPage, {}) }) }) }) })));
 };
 export default App;
 //# sourceMappingURL=app.js.map

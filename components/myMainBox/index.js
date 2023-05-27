@@ -14,15 +14,15 @@ import { Box } from "@mui/material";
 import { Text } from "../../elements/text";
 export var MyMainBox = function () {
     return (_jsx(Box, __assign({ sx: {
-            backgroundColor: 'primary.main',
-            width: '100%',
-            height: '100vh',
-            display: 'flex',
-            textAlign: 'center',
-            alignSelf: 'center',
-            alignItems: 'center',
-            alignContent: 'center',
-            justifyContent: 'center'
-        } }, { children: _jsx(Text, { type: "h2", text: "Looking for a skilled software developer?" }) })));
+            backgroundColor: "primary.main",
+            width: "100%",
+            height: "100vh",
+            display: "flex",
+            textAlign: "center",
+            alignSelf: "center",
+            alignItems: "center",
+            alignContent: "center",
+            justifyContent: "center",
+        } }, { children: _jsx(Text, { type: "h2", color: "text.secondary", text: "Looking for a skilled software developer?" }) })));
 };
 //# sourceMappingURL=index.js.map
