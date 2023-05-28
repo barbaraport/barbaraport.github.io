@@ -15,7 +15,7 @@ export const AboutMe = (): JSX.Element => {
             />
             <MyAccordion
                 disabled={false}
-                defaultExpanded={false}
+                defaultExpanded={true}
                 title="Hard Skills"
                 text={[
                     "Complex business logic development using Java 8, formulating, and implementing integration and unit test cases with JUnit 5 and leveraging the Spring Framework for microservices architecture;",
@@ -27,7 +27,7 @@ export const AboutMe = (): JSX.Element => {
             />
             <MyAccordion
                 disabled={false}
-                defaultExpanded={false}
+                defaultExpanded={true}
                 title="Soft Skills"
                 text={[
                     "My communicative nature shines through collaborating remotely using agile methodologies, breaking down language barriers;",
