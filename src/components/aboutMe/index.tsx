@@ -10,7 +10,7 @@ export const AboutMe = (): JSX.Element => {
                 defaultExpanded={true}
                 title="About me"
                 text={[
-                    "Experienced software developer with a passion for crafting high-quality solutions. Recognized with two Honorable Mentions for my outstanding contributions in educational institutions;",
+                    "Experienced software developer with a passion for crafting high-quality solutions. Recognized with two Honorable Mentions for my outstanding contributions in educational institutions.",
                 ]}
             />
             <MyAccordion
@@ -21,7 +21,7 @@ export const AboutMe = (): JSX.Element => {
                     "Complex business logic development using Java 8, formulating, and implementing integration and unit test cases with JUnit 5 and leveraging the Spring Framework for microservices architecture;",
                     "Adept at developing React functional and class components, implementing client features using TypeScript/JavaScript;",
                     "Consulting on automated testing with Selenium/Cypress;",
-                    "My expertise extends to Cucumber/Gherkin for automated specifications;",
+                    "My expertise extends to Cucumber/Gherkin for automated specifications.",
                 ]}
                 paragraphIcon={<CheckBoxTwoToneIcon />}
             />
