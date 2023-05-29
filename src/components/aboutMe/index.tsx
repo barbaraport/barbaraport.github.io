@@ -8,7 +8,7 @@ export const AboutMe = (): JSX.Element => {
             <MyAccordion
                 disabled={false}
                 defaultExpanded={true}
-                title="About me"
+                title="About Me"
                 text={[
                     "Experienced software developer with a passion for crafting high-quality solutions and skilled in strong typed languages. Recognized with two Honorable Mentions for my outstanding contributions in educational institutions.",
                 ]}
