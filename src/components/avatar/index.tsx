@@ -8,8 +8,8 @@ type AvatarSize = {
 
 export const MyAvatar = (): JSX.Element => {
   const avatarSize: AvatarSize = {
-    width: "20vh",
-    height: "20vh",
+    width: "30vh",
+    height: "30vh",
   };
 
   return (
