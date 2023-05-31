@@ -3,7 +3,6 @@ import { AboutMe } from "../../components/aboutMe"
 import { MyAvatar } from "../../components/avatar"
 import { Footer } from "../../components/footer"
 import { MyMainBox } from "../../components/myMainBox"
-import { Text } from "../../elements/text"
 
 export const MyPage = (): JSX.Element => {
     return (
@@ -18,7 +17,6 @@ export const MyPage = (): JSX.Element => {
                 }}
             >
                 <MyAvatar />
-                <Text type="body1" text="Bárbara Port" />
                 <AboutMe />
             </Container>
             <Footer />
