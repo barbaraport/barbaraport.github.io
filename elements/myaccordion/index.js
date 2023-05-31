@@ -28,6 +28,6 @@ export var MyAccordion = function (props) {
         });
         return paragraphs;
     };
-    return (_jsxs(Accordion, __assign({ disabled: props.disabled, defaultExpanded: props.defaultExpanded }, { children: [_jsx(AccordionSummary, __assign({ expandIcon: _jsx(ExpandMoreIcon, {}), "aria-controls": "panel2a-content", id: "panel2a-header" }, { children: _jsx(Text, { type: "body1", text: props.title }) })), _jsx(AccordionDetails, { children: formatParagraphs() })] })));
+    return (_jsxs(Accordion, __assign({ disabled: props.disabled, defaultExpanded: props.defaultExpanded }, { children: [_jsx(AccordionSummary, __assign({ expandIcon: _jsx(ExpandMoreIcon, {}), "aria-controls": "panel2a-content", id: "panel2a-header" }, { children: _jsx(Box, __assign({ width: "100%", textAlign: "center" }, { children: _jsx(Text, { type: "body1", text: props.title }) })) })), _jsx(AccordionDetails, { children: formatParagraphs() })] })));
 };
 //# sourceMappingURL=index.js.map
