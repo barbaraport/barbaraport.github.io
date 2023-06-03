@@ -6,14 +6,16 @@ import { Footer } from "../../components/footer"
 import { MyMainBox } from "../../components/myMainBox"
 
 export const MyPage = (): JSX.Element => {
-    const myRef = useRef()
+    const myRef: React.MutableRefObject<Element | undefined> = useRef()
 
-    const [isMyElementVisible, updateIsMyElementVisible] = useState()
+    const [isMyElementVisible, updateIsMyElementVisible] = useState(false)
 
     useEffect(() => {
+        if (!myRef.current) return
+
         const observer = new IntersectionObserver(entries => {
             const entry = entries[0]
-            updateIsMyElementVisible(entry.isIntersecting)
+            if (entry) updateIsMyElementVisible(entry.isIntersecting)
         })
         observer.observe(myRef.current)
     }, [])
