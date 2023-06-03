@@ -1,30 +1,15 @@
 import { Box, Container, Fade } from "@mui/material"
-import { useEffect, useRef, useState } from "react"
 import { AboutMe } from "../../components/aboutMe"
 import { MyAvatar } from "../../components/avatar"
 import { Footer } from "../../components/footer"
 import { MyMainBox } from "../../components/myMainBox"
 
 export const MyPage = (): JSX.Element => {
-    const myRef: React.MutableRefObject<Element | undefined> = useRef()
-
-    const [isMyElementVisible, updateIsMyElementVisible] = useState(false)
-
-    useEffect(() => {
-        if (!myRef.current) return
-
-        const observer = new IntersectionObserver(entries => {
-            const entry = entries[0]
-            if (entry) updateIsMyElementVisible(entry.isIntersecting)
-        })
-        observer.observe(myRef.current)
-    }, [])
-
     return (
         <Box sx={{ backgroundColor: "text.secondary" }}>
-            <MyMainBox />
-            <Fade in={isMyElementVisible} ref={myRef}>
+            <Fade in={true} timeout={2500}>
                 <Box>
+                    <MyMainBox />
                     <Container
                         sx={{
                             display: "flex",
