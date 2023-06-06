@@ -37,6 +37,12 @@ export const AboutMe = (): JSX.Element => {
                 ]}
                 paragraphIcon={<CheckBoxTwoToneIcon />}
             />
+            <MyAccordion
+                disabled={true}
+                defaultExpanded={false}
+                title="Projects"
+                text={[]}
+            />
         </Box>
     )
 }
