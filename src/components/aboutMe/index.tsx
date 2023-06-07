@@ -1,5 +1,5 @@
 import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone"
-import { Box } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import { MyAccordion } from "../../elements/myAccordion"
 
 export const AboutMe = (): JSX.Element => {
@@ -43,6 +43,15 @@ export const AboutMe = (): JSX.Element => {
                 title="Projects"
                 text={[]}
             />
+            <Box>
+                <Box
+                    border={"1px solid"}
+                    borderColor={"primary"}
+                    borderRadius={"8px"}
+                >
+                    <Typography>Test</Typography>
+                </Box>
+            </Box>
         </Box>
     )
 }
