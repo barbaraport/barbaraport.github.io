@@ -1,9 +1,26 @@
-import { Typography } from "@material-ui/core"
 import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone"
-import { Box } from "@mui/material"
+import { Box, Grid } from "@mui/material"
+import axios from "axios"
+import { useEffect, useState } from "react"
 import { MyAccordion } from "../../elements/myAccordion"
+import { Text } from "../../elements/text"
 
 export const AboutMe = (): JSX.Element => {
+    const [repositories, setRepositories] = useState<any>()
+
+    useEffect(() => {
+        fetchRepositories()
+    }, [])
+
+    const fetchRepositories = async (): Promise<void> => {
+        const response: any = await axios.get(
+            "https://api.github.com/users/barbaraport/repos"
+        )
+
+        const fetchedRepositories: Array<any> = await response.data
+        setRepositories(fetchedRepositories)
+    }
+
     const aboutMe = (): Array<string> => {
         return [
             "Experienced software developer with a passion for crafting high-quality solutions and skilled in strong typed languages. Recognized with two Honorable Mentions for my outstanding contributions in educational institutions.",
@@ -28,20 +45,34 @@ export const AboutMe = (): JSX.Element => {
     }
 
     const projects = (): Array<JSX.Element> => {
-        const projects: Array<JSX.Element> = []
+        const items: Array<JSX.Element> = []
 
-        projects.push(
-            <Box
-                border={"1px solid"}
-                borderColor={"primary"}
-                borderRadius={"8px"}
-                height={"256px"}
+        console.log(repositories)
+
+        repositories?.forEach((repository: any) => {
+            items.push(
+                <Grid item xs={"auto"} sm={4} md={4} key={repository.name}>
+                    <Box
+                        border={"1px solid"}
+                        borderColor={"primary"}
+                        borderRadius={"8px"}
+                        height={"256px"}
+                    >
+                        <Text type="body1" text={repository.name}></Text>
+                    </Box>
+                </Grid>
+            )
+        })
+
+        return [
+            <Grid
+                container
+                spacing={{ xs: 2, md: 3 }}
+                columns={{ xs: 4, sm: 8, md: 12 }}
             >
-                <Typography>Test</Typography>
-            </Box>
-        )
-
-        return projects
+                {items}
+            </Grid>,
+        ]
     }
 
     return (
