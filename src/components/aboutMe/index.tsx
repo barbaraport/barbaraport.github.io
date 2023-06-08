@@ -48,6 +48,7 @@ export const AboutMe = (): JSX.Element => {
                     border={"1px solid"}
                     borderColor={"primary"}
                     borderRadius={"8px"}
+                    height={"256px"}
                 >
                     <Typography>Test</Typography>
                 </Box>
