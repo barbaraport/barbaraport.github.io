@@ -9,25 +9,29 @@ type MyAccordionProps = {
     disabled: boolean
     defaultExpanded: boolean
     title: string
-    text: Array<string>
     paragraphIcon?: JSX.Element
+    children?: Array<JSX.Element> | Array<string>
 }
 
 export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
     const formatParagraphs = (): Array<JSX.Element> => {
         const paragraphs: Array<JSX.Element> = []
 
-        props.text.forEach((paragraph: string) => {
-            const text: JSX.Element = <Text type="body1" text={paragraph} />
+        props.children?.forEach((child: JSX.Element | string) => {
+            if (typeof child === 'string') {
+                const text: JSX.Element = <Text type="body1" text={child as string} />
 
-            if (props.paragraphIcon)
-                paragraphs.push(
-                    <Box display={"flex"} flexDirection={"row"} gap={"8px"}>
-                        {props.paragraphIcon}
-                        {text}
-                    </Box>
-                )
-            else paragraphs.push(text)
+                if (props.paragraphIcon)
+                    paragraphs.push(
+                        <Box display={"flex"} flexDirection={"row"} gap={"8px"}>
+                            {props.paragraphIcon}
+                            {text}
+                        </Box>
+                    )
+                else paragraphs.push(text)
+            } else {
+                paragraphs.push(child as JSX.Element)
+            }
         })
 
         return paragraphs
