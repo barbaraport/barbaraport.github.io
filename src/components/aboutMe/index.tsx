@@ -54,9 +54,15 @@ export const AboutMe = (): JSX.Element => {
                 <Grid item xs={12} sm={6} md={4} key={repository.name}>
                     <Box
                         border={"1px solid"}
-                        borderColor={"primary"}
+                        borderColor={"text.secondary"}
                         borderRadius={"8px"}
-                        height={"256px"}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            placeContent: "center",
+                            alignItems: "center",
+                            padding: "16px",
+                        }}
                     >
                         <Box
                             component="img"
@@ -67,7 +73,11 @@ export const AboutMe = (): JSX.Element => {
                             }
                         />
                         <Box>
-                            <Text type="body2" text={repository.name}></Text>
+                            <Text
+                                type="body2"
+                                fontWeight="bold"
+                                text={repository.name}
+                            ></Text>
                             <Text
                                 type="body2"
                                 text={repository.description}
