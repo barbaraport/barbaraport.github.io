@@ -51,7 +51,7 @@ export const AboutMe = (): JSX.Element => {
 
         repositories?.forEach((repository: any) => {
             items.push(
-                <Grid item xs={"auto"} sm={4} md={4} key={repository.name}>
+                <Grid item xs={12} sm={6} md={4} key={repository.name}>
                     <Box
                         border={"1px solid"}
                         borderColor={"primary"}
@@ -67,8 +67,8 @@ export const AboutMe = (): JSX.Element => {
         return [
             <Grid
                 container
-                spacing={{ xs: 2, md: 3 }}
-                columns={{ xs: 4, sm: 8, md: 12 }}
+                spacing={{ xs: 2, sm: 2, md: 2 }}
+                justifyContent={"center"}
                 key={"repositories"}
             >
                 {items}
