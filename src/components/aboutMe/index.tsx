@@ -66,7 +66,13 @@ export const AboutMe = (): JSX.Element => {
                                 "https://icon-library.com/images/folder-image-icon/folder-image-icon-2.jpg"
                             }
                         />
-                        <Text type="body2" text={repository.name}></Text>
+                        <Box>
+                            <Text type="body2" text={repository.name}></Text>
+                            <Text
+                                type="body2"
+                                text={repository.description}
+                            ></Text>
+                        </Box>
                     </Box>
                 </Grid>
             )
