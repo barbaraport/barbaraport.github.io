@@ -58,6 +58,14 @@ export const AboutMe = (): JSX.Element => {
                         borderRadius={"8px"}
                         height={"256px"}
                     >
+                        <Box
+                            component="img"
+                            alt="Folder image"
+                            width={"50%"}
+                            src={
+                                "https://icon-library.com/images/folder-image-icon/folder-image-icon-2.jpg"
+                            }
+                        />
                         <Text type="body2" text={repository.name}></Text>
                     </Box>
                 </Grid>
