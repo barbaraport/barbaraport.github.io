@@ -1,5 +1,5 @@
 import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone"
-import { Box, Grid } from "@mui/material"
+import { Box, Grid, Link } from "@mui/material"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { MyAccordion } from "../../elements/myAccordion"
@@ -52,38 +52,40 @@ export const AboutMe = (): JSX.Element => {
         repositories?.forEach((repository: any) => {
             items.push(
                 <Grid item xs={12} sm={6} md={4} key={repository.name}>
-                    <Box
-                        border={"1px solid"}
-                        borderColor={"text.secondary"}
-                        borderRadius={"8px"}
-                        sx={{
-                            display: "flex",
-                            flexDirection: "column",
-                            placeContent: "center",
-                            alignItems: "center",
-                            padding: "16px",
-                        }}
-                    >
+                    <Link href={repository.html_url}>
                         <Box
-                            component="img"
-                            alt="Folder image"
-                            width={"50%"}
-                            src={
-                                "https://icon-library.com/images/folder-image-icon/folder-image-icon-2.jpg"
-                            }
-                        />
-                        <Box>
-                            <Text
-                                type="body2"
-                                fontWeight="bold"
-                                text={repository.name}
-                            ></Text>
-                            <Text
-                                type="body2"
-                                text={repository.description}
-                            ></Text>
+                            border={"1px solid"}
+                            borderColor={"text.secondary"}
+                            borderRadius={"8px"}
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                placeContent: "center",
+                                alignItems: "center",
+                                padding: "16px",
+                            }}
+                        >
+                            <Box
+                                component="img"
+                                alt="Folder image"
+                                width={"50%"}
+                                src={
+                                    "https://icon-library.com/images/folder-image-icon/folder-image-icon-2.jpg"
+                                }
+                            />
+                            <Box>
+                                <Text
+                                    type="body2"
+                                    fontWeight="bold"
+                                    text={repository.name}
+                                ></Text>
+                                <Text
+                                    type="body2"
+                                    text={repository.description}
+                                ></Text>
+                            </Box>
                         </Box>
-                    </Box>
+                    </Link>
                 </Grid>
             )
         })
