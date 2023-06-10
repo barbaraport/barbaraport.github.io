@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography"
 
 type TextProps = {
     text: string
-    type: "h2" | "h6" | "body1"
+    type: "h2" | "h6" | "body1" | "body2"
     color?: string
 }
 

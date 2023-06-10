@@ -58,7 +58,7 @@ export const AboutMe = (): JSX.Element => {
                         borderRadius={"8px"}
                         height={"256px"}
                     >
-                        <Text type="body1" text={repository.name}></Text>
+                        <Text type="body2" text={repository.name}></Text>
                     </Box>
                 </Grid>
             )
