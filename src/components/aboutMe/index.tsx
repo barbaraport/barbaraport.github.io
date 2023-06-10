@@ -104,7 +104,7 @@ export const AboutMe = (): JSX.Element => {
             <MyAccordion
                 disabled={false}
                 defaultExpanded={false}
-                title="Projects"
+                title="GitHub Projects"
             >
                 {projects()}
             </MyAccordion>
