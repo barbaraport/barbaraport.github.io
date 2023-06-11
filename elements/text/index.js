@@ -12,6 +12,6 @@ var __assign = (this && this.__assign) || function () {
 import { jsx as _jsx } from "react/jsx-runtime";
 import Typography from "@mui/material/Typography";
 export var Text = function (props) {
-    return (_jsx(Typography, __assign({ variant: props.type, color: props.color ? props.color : "text.primary" }, { children: props.text })));
+    return (_jsx(Typography, __assign({ variant: props.type, color: props.color ? props.color : "text.primary", sx: { fontWeight: props.fontWeight ? "bold" : "normal" } }, { children: props.text })));
 };
 //# sourceMappingURL=index.js.map

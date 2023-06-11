@@ -18,13 +18,19 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import { Text } from "../text";
 export var MyAccordion = function (props) {
     var formatParagraphs = function () {
+        var _a;
         var paragraphs = [];
-        props.text.forEach(function (paragraph) {
-            var text = _jsx(Text, { type: "body1", text: paragraph });
-            if (props.paragraphIcon)
-                paragraphs.push(_jsxs(Box, __assign({ display: "flex", flexDirection: "row", gap: "8px" }, { children: [props.paragraphIcon, text] })));
-            else
-                paragraphs.push(text);
+        (_a = props.children) === null || _a === void 0 ? void 0 : _a.forEach(function (child) {
+            if (typeof child === 'string') {
+                var text = _jsx(Text, { type: "body1", text: child });
+                if (props.paragraphIcon)
+                    paragraphs.push(_jsxs(Box, __assign({ display: "flex", flexDirection: "row", gap: "8px" }, { children: [props.paragraphIcon, text] })));
+                else
+                    paragraphs.push(text);
+            }
+            else {
+                paragraphs.push(child);
+            }
         });
         return paragraphs;
     };
