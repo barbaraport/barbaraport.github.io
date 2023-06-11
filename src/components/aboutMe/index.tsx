@@ -51,7 +51,14 @@ export const AboutMe = (): JSX.Element => {
 
         repositories?.forEach((repository: any) => {
             items.push(
-                <Grid item xs={12} sm={6} md={4} key={repository.name}>
+                <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    key={repository.name}
+                    sx={{ wordWrap: "break-word" }}
+                >
                     <Link href={repository.html_url}>
                         <Box
                             border={"1px solid"}
