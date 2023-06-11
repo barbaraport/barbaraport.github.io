@@ -53,6 +53,7 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.0",
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.4.0",
     "react-router-dom": "^6.11.2"
   }
 }
