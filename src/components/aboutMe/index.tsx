@@ -47,8 +47,6 @@ export const AboutMe = (): JSX.Element => {
     const projects = (): Array<JSX.Element> => {
         const items: Array<JSX.Element> = []
 
-        console.log(repositories)
-
         repositories?.forEach((repository: any) => {
             items.push(
                 <Grid
