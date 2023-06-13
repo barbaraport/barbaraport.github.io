@@ -57,7 +57,7 @@ export const AboutMe = (): JSX.Element => {
                     key={repository.name}
                     sx={{ wordWrap: "break-word" }}
                 >
-                    <Link href={repository.html_url}>
+                    <Link href={repository.html_url} underline={"hover"}>
                         <Box
                             border={"1px solid"}
                             borderColor={"text.secondary"}
