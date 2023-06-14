@@ -96,12 +96,13 @@ export var AboutMe = function () {
     var projects = function () {
         var items = [];
         repositories === null || repositories === void 0 ? void 0 : repositories.forEach(function (repository) {
-            items.push(_jsx(Grid, __assign({ item: true, xs: 12, sm: 6, md: 4, sx: { wordWrap: "break-word" } }, { children: _jsx(Link, __assign({ href: repository.html_url }, { children: _jsxs(Box, __assign({ border: "1px solid", borderColor: "text.secondary", borderRadius: "8px", sx: {
+            items.push(_jsx(Grid, __assign({ item: true, xs: 12, sm: 6, md: 4, sx: { wordWrap: "break-word", padding: "16px" } }, { children: _jsx(Link, __assign({ href: repository.html_url, underline: "hover" }, { children: _jsxs(Box, __assign({ border: "1px solid", borderColor: "text.secondary", borderRadius: "8px", sx: {
                             display: "flex",
                             flexDirection: "column",
                             placeContent: "center",
                             alignItems: "center",
-                            padding: "16px",
+                            height: "100%",
+                            padding: "8px",
                         } }, { children: [_jsx(Box, { component: "img", alt: "Folder image", width: "50%", src: "https://icon-library.com/images/folder-image-icon/folder-image-icon-2.jpg" }), _jsxs(Box, { children: [_jsx(Text, { type: "body2", fontWeight: "bold", text: repository.name }), _jsx(Text, { type: "body2", text: repository.description })] })] })) })) }), repository.name));
         });
         return [
