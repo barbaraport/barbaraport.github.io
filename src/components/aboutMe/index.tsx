@@ -55,7 +55,7 @@ export const AboutMe = (): JSX.Element => {
                     sm={6}
                     md={4}
                     key={repository.name}
-                    sx={{ wordWrap: "break-word" }}
+                    sx={{ wordWrap: "break-word", padding: "16px" }}
                 >
                     <Link href={repository.html_url} underline={"hover"}>
                         <Box
@@ -67,7 +67,8 @@ export const AboutMe = (): JSX.Element => {
                                 flexDirection: "column",
                                 placeContent: "center",
                                 alignItems: "center",
-                                padding: "16px",
+                                height: "100%",
+                                padding: "8px",
                             }}
                         >
                             <Box
