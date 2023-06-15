@@ -17,22 +17,35 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
     const formatParagraphs = (): Array<JSX.Element> => {
         const paragraphs: Array<JSX.Element> = []
 
-        props.children?.forEach((child: JSX.Element | string) => {
-            if (typeof child === 'string') {
-                const text: JSX.Element = <Text type="body1" text={child as string} />
-
-                if (props.paragraphIcon)
-                    paragraphs.push(
-                        <Box display={"flex"} flexDirection={"row"} gap={"8px"}>
-                            {props.paragraphIcon}
-                            {text}
-                        </Box>
+        props.children?.forEach(
+            (child: JSX.Element | string, index: number) => {
+                if (typeof child === "string") {
+                    const text: JSX.Element = (
+                        <Text
+                            type="body1"
+                            text={child as string}
+                            key={"text-" + index}
+                        />
                     )
-                else paragraphs.push(text)
-            } else {
-                paragraphs.push(child as JSX.Element)
+
+                    if (props.paragraphIcon)
+                        paragraphs.push(
+                            <Box
+                                display={"flex"}
+                                flexDirection={"row"}
+                                gap={"8px"}
+                                key={"box-" + index}
+                            >
+                                {props.paragraphIcon}
+                                {text}
+                            </Box>
+                        )
+                    else paragraphs.push(text)
+                } else {
+                    paragraphs.push(child as JSX.Element)
+                }
             }
-        })
+        )
 
         return paragraphs
     }
