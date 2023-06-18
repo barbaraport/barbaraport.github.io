@@ -1,23 +1,25 @@
 import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone"
 import { Box, Grid, Link } from "@mui/material"
-import axios from "axios"
+import axios, { AxiosResponse } from "axios"
 import { useEffect, useState } from "react"
 import { MyAccordion } from "../../elements/myAccordion"
 import { Text } from "../../elements/text"
+import { GitHubRepository } from "../../model/dto/GitHubRepository"
 
 export const AboutMe = (): JSX.Element => {
-    const [repositories, setRepositories] = useState<any>()
+    const [repositories, setRepositories] = useState<Array<GitHubRepository>>()
 
     useEffect(() => {
         fetchRepositories()
     }, [])
 
     const fetchRepositories = async (): Promise<void> => {
-        const response: any = await axios.get(
+        const response: AxiosResponse<unknown, unknown> = await axios.get(
             "https://api.github.com/users/barbaraport/repos"
         )
 
-        const fetchedRepositories: Array<any> = await response.data
+        const fetchedRepositories: Array<GitHubRepository> =
+            (await response.data) as Array<GitHubRepository>
         setRepositories(fetchedRepositories)
     }
 
@@ -47,7 +49,7 @@ export const AboutMe = (): JSX.Element => {
     const projects = (): Array<JSX.Element> => {
         const items: Array<JSX.Element> = []
 
-        repositories?.forEach((repository: any) => {
+        repositories?.forEach((repository: GitHubRepository) => {
             items.push(
                 <Grid
                     item
