@@ -49,7 +49,7 @@ export const AboutMe = (): JSX.Element => {
     const projects = (): Array<JSX.Element> => {
         const items: Array<JSX.Element> = []
 
-        repositories?.forEach((repository: any) => {
+        repositories?.forEach((repository: GitHubRepository) => {
             items.push(
                 <Grid
                     item
