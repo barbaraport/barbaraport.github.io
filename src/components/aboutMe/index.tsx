@@ -1,25 +1,21 @@
 import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone"
 import { Box, Grid, Link } from "@mui/material"
-import axios, { AxiosResponse } from "axios"
 import { useEffect, useState } from "react"
 import { MyAccordion } from "../../elements/myAccordion"
 import { Text } from "../../elements/text"
 import { GitHubRepository } from "../../model/dto/GitHubRepository"
+import { fetchRepositories } from "../../model/service/GitHubRepositoriesService"
 
 export const AboutMe = (): JSX.Element => {
     const [repositories, setRepositories] = useState<Array<GitHubRepository>>()
 
     useEffect(() => {
-        fetchRepositories()
+        fetchMyRepositories()
     }, [])
 
-    const fetchRepositories = async (): Promise<void> => {
-        const response: AxiosResponse<unknown, unknown> = await axios.get(
-            "https://api.github.com/users/barbaraport/repos"
-        )
-
+    const fetchMyRepositories = async (): Promise<void> => {
         const fetchedRepositories: Array<GitHubRepository> =
-            (await response.data) as Array<GitHubRepository>
+            await fetchRepositories()
         setRepositories(fetchedRepositories)
     }
 
