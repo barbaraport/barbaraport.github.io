@@ -1,8 +1,8 @@
 import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone"
-import { Box, Grid, Link } from "@mui/material"
+import { Box, Grid } from "@mui/material"
 import { useEffect, useState } from "react"
 import { MyAccordion } from "../../elements/myAccordion"
-import { Text } from "../../elements/text"
+import { MyProject } from "../../elements/myProject"
 import { GitHubRepository } from "../../model/dto/GitHubRepository"
 import { fetchRepositories } from "../../model/service/GitHubRepositoriesService"
 
@@ -46,52 +46,7 @@ export const AboutMe = (): JSX.Element => {
         const items: Array<JSX.Element> = []
 
         repositories?.forEach((repository: GitHubRepository) => {
-            items.push(
-                <Grid
-                    item
-                    xs={12}
-                    sm={6}
-                    md={4}
-                    key={repository.name}
-                    sx={{ wordWrap: "break-word", padding: "16px" }}
-                >
-                    <Link href={repository.html_url} underline={"hover"}>
-                        <Box
-                            border={"1px solid"}
-                            borderColor={"text.secondary"}
-                            borderRadius={"8px"}
-                            sx={{
-                                display: "flex",
-                                flexDirection: "column",
-                                placeContent: "center",
-                                alignItems: "center",
-                                height: "100%",
-                                padding: "8px",
-                            }}
-                        >
-                            <Box
-                                component="img"
-                                alt="Folder image"
-                                width={"50%"}
-                                src={
-                                    "https://icon-library.com/images/folder-image-icon/folder-image-icon-2.jpg"
-                                }
-                            />
-                            <Box>
-                                <Text
-                                    type="body2"
-                                    fontWeight="bold"
-                                    text={repository.name}
-                                ></Text>
-                                <Text
-                                    type="body2"
-                                    text={repository.description}
-                                ></Text>
-                            </Box>
-                        </Box>
-                    </Link>
-                </Grid>
-            )
+            items.push(<MyProject project={repository} />)
         })
 
         return [
