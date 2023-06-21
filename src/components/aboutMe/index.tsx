@@ -1,28 +1,9 @@
 import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone"
-import { Box, Grid, Link } from "@mui/material"
-import axios, { AxiosResponse } from "axios"
-import { useEffect, useState } from "react"
+import { Box } from "@mui/material"
 import { MyAccordion } from "../../elements/myAccordion"
-import { Text } from "../../elements/text"
-import { GitHubRepository } from "../../model/dto/GitHubRepository"
+import { MyProjects } from "../projects"
 
 export const AboutMe = (): JSX.Element => {
-    const [repositories, setRepositories] = useState<Array<GitHubRepository>>()
-
-    useEffect(() => {
-        fetchRepositories()
-    }, [])
-
-    const fetchRepositories = async (): Promise<void> => {
-        const response: AxiosResponse<unknown, unknown> = await axios.get(
-            "https://api.github.com/users/barbaraport/repos"
-        )
-
-        const fetchedRepositories: Array<GitHubRepository> =
-            (await response.data) as Array<GitHubRepository>
-        setRepositories(fetchedRepositories)
-    }
-
     const aboutMe = (): Array<string> => {
         return [
             "Experienced software developer with a passion for crafting high-quality solutions and skilled in strong typed languages. Recognized with two Honorable Mentions for my outstanding contributions in educational institutions.",
@@ -47,67 +28,7 @@ export const AboutMe = (): JSX.Element => {
     }
 
     const projects = (): Array<JSX.Element> => {
-        const items: Array<JSX.Element> = []
-
-        repositories?.forEach((repository: GitHubRepository) => {
-            items.push(
-                <Grid
-                    item
-                    xs={12}
-                    sm={6}
-                    md={4}
-                    key={repository.name}
-                    sx={{ wordWrap: "break-word", padding: "16px" }}
-                >
-                    <Link href={repository.html_url} underline={"hover"}>
-                        <Box
-                            border={"1px solid"}
-                            borderColor={"text.secondary"}
-                            borderRadius={"8px"}
-                            sx={{
-                                display: "flex",
-                                flexDirection: "column",
-                                placeContent: "center",
-                                alignItems: "center",
-                                height: "100%",
-                                padding: "8px",
-                            }}
-                        >
-                            <Box
-                                component="img"
-                                alt="Folder image"
-                                width={"50%"}
-                                src={
-                                    "https://icon-library.com/images/folder-image-icon/folder-image-icon-2.jpg"
-                                }
-                            />
-                            <Box>
-                                <Text
-                                    type="body2"
-                                    fontWeight="bold"
-                                    text={repository.name}
-                                ></Text>
-                                <Text
-                                    type="body2"
-                                    text={repository.description}
-                                ></Text>
-                            </Box>
-                        </Box>
-                    </Link>
-                </Grid>
-            )
-        })
-
-        return [
-            <Grid
-                container
-                spacing={{ xs: 2, sm: 2, md: 2 }}
-                justifyContent={"center"}
-                key={"repositories"}
-            >
-                {items}
-            </Grid>,
-        ]
+        return [<MyProjects key={"projects"} />]
     }
 
     return (
