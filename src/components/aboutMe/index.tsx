@@ -1,24 +1,9 @@
 import CheckBoxTwoToneIcon from "@mui/icons-material/CheckBoxTwoTone"
-import { Box, Grid } from "@mui/material"
-import { useEffect, useState } from "react"
+import { Box } from "@mui/material"
 import { MyAccordion } from "../../elements/myAccordion"
-import { MyProject } from "../../elements/myProject"
-import { GitHubRepository } from "../../model/dto/GitHubRepository"
-import { fetchRepositories } from "../../model/service/GitHubRepositoriesService"
+import { MyProjects } from "../projects"
 
 export const AboutMe = (): JSX.Element => {
-    const [repositories, setRepositories] = useState<Array<GitHubRepository>>()
-
-    useEffect(() => {
-        fetchMyRepositories()
-    }, [])
-
-    const fetchMyRepositories = async (): Promise<void> => {
-        const fetchedRepositories: Array<GitHubRepository> =
-            await fetchRepositories()
-        setRepositories(fetchedRepositories)
-    }
-
     const aboutMe = (): Array<string> => {
         return [
             "Experienced software developer with a passion for crafting high-quality solutions and skilled in strong typed languages. Recognized with two Honorable Mentions for my outstanding contributions in educational institutions.",
@@ -43,22 +28,7 @@ export const AboutMe = (): JSX.Element => {
     }
 
     const projects = (): Array<JSX.Element> => {
-        const items: Array<JSX.Element> = []
-
-        repositories?.forEach((repository: GitHubRepository) => {
-            items.push(<MyProject project={repository} />)
-        })
-
-        return [
-            <Grid
-                container
-                spacing={{ xs: 2, sm: 2, md: 2 }}
-                justifyContent={"center"}
-                key={"repositories"}
-            >
-                {items}
-            </Grid>,
-        ]
+        return [<MyProjects key={"projects"} />]
     }
 
     return (
