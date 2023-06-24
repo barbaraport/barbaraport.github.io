@@ -21,11 +21,9 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
             (child: JSX.Element | string, index: number) => {
                 if (typeof child === "string") {
                     const text: JSX.Element = (
-                        <Text
-                            type="body1"
-                            text={child as string}
-                            key={"text-" + index}
-                        />
+                        <Text type="body1" key={"text-" + index}>
+                            {child as string}
+                        </Text>
                     )
 
                     if (props.paragraphIcon)
@@ -61,7 +59,7 @@ export const MyAccordion = (props: MyAccordionProps): JSX.Element => {
                 id="panel2a-header"
             >
                 <Box width={"100%"} textAlign={"center"}>
-                    <Text type="body1" text={props.title} />
+                    <Text type="body1">{props.title}</Text>
                 </Box>
             </AccordionSummary>
             <AccordionDetails>{formatParagraphs()}</AccordionDetails>

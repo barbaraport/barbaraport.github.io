@@ -39,15 +39,10 @@ export const MyProject = (props: MyProjectProps): JSX.Element => {
                         }
                     />
                     <Box>
-                        <Text
-                            type="body2"
-                            fontWeight="bold"
-                            text={props.project.name}
-                        ></Text>
-                        <Text
-                            type="body2"
-                            text={props.project.description}
-                        ></Text>
+                        <Text type="body2" fontWeight="bold">
+                            {props.project.name}
+                        </Text>
+                        <Text type="body2">{props.project.description}</Text>
                     </Box>
                 </Box>
             </Link>

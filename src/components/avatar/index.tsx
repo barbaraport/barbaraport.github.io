@@ -27,10 +27,9 @@ export const MyAvatar = (): JSX.Element => {
                 src="https://avatars.githubusercontent.com/u/62317075?v=4"
                 sx={avatarSize}
             />
-            <Text
-                type="h6"
-                text="Hello! You can call me Bárbara Port. I am here to help you."
-            />
+            <Text type="h6">
+                Hello! You can call me Bárbara Port. I am here to help you.
+            </Text>
         </Box>
     )
 }
