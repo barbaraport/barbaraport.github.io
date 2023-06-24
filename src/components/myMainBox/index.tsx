@@ -16,11 +16,9 @@ export const MyMainBox = (): JSX.Element => {
                 justifyContent: "center",
             }}
         >
-            <Text
-                type="h2"
-                color="text.secondary"
-                text="Looking for a skilled software developer?"
-            />
+            <Text type="h2" color="text.secondary">
+                Looking for a skilled software developer?
+            </Text>
         </Box>
     )
 }
