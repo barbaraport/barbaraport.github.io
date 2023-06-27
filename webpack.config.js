@@ -18,7 +18,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(tsx|ts)$/,
         exclude: /node_modules/,
         use: "ts-loader",
       },
@@ -33,7 +33,7 @@ export default {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".js"],
+    extensions: [".ts", ".tsx", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({
