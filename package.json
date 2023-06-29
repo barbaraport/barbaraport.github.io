@@ -8,7 +8,8 @@
   "main": "main.tsx",
   "scripts": {
     "lint": "npx tsc && eslint ./src",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "npx cypress run",
+    "test": "npm run cy:run",
     "dev": "npm run lint && webpack-dev-server --open --mode development --hot",
     "deploy": "npm run lint && webpack --mode production",
     "deploy:gh": "npm run deploy && gh-pages -d dist"
