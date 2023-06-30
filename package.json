@@ -16,7 +16,6 @@
   },
   "author": "Bárbara dos Santos Port",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",

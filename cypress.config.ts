@@ -5,7 +5,7 @@ export default defineConfig({
     devServer: {
       framework: "react",
       bundler: "webpack",
-    },
+    }
   },
 
   e2e: {
