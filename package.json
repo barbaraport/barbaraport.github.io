@@ -8,7 +8,7 @@
   "main": "main.tsx",
   "scripts": {
     "lint": "npx tsc && eslint ./src",
-    "cy:run": "npx cypress run",
+    "cy:run": "npx cypress run --component && npx cypress run --e2e",
     "test": "npm run cy:run",
     "dev": "npm run lint && webpack-dev-server --open --mode development --hot",
     "deploy": "npm run lint && webpack --mode production",
