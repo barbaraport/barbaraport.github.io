@@ -1,6 +1,6 @@
 describe('my portfolio', () => {
     beforeEach(() => {
-      cy.visit('http://localhost:8080/')
+      cy.visit('http://127.0.0.1:8080/')
     })
 
     it('checks the visible content', () => {
