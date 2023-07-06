@@ -1,4 +1,4 @@
-import { Text } from ".."
+import { Text } from "../../src/elements/text"
 
 it("text", () => {
     cy.mount(
