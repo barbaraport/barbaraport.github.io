@@ -40,3 +40,4 @@ sketch
 
 dist
 cypress/videos/*
+cypress/screenshots/*
