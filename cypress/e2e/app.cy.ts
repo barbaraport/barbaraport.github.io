@@ -1,5 +1,5 @@
-describe('template spec', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io')
+describe('my website', () => {
+  it('just accessing the website', () => {
+    cy.visit('http://localhost:8080')
   })
 })
