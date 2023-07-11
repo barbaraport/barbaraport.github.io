@@ -8,7 +8,7 @@
   "main": "main.tsx",
   "scripts": {
     "lint": "npx tsc && eslint ./src",
-    "test": "npx cypress run",
+    "test": "start-server-and-test dev http://localhost:8080 npx cypress run",
     "dev": "npm run lint && webpack-dev-server --open --mode development --hot",
     "deploy": "npm run lint && webpack --mode production",
     "deploy:gh": "npm run deploy && gh-pages -d dist"
@@ -37,6 +37,7 @@
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "start-server-and-test": "^2.0.0",
     "style-loader": "^3.3.2",
     "ts-loader": "^9.4.2",
     "typescript": "^5.0.4",
