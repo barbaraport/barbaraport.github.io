@@ -8,7 +8,8 @@
   "main": "main.tsx",
   "scripts": {
     "lint": "npx tsc && eslint ./src",
-    "test": "start-server-and-test dev http://localhost:8080 npx cypress run",
+    "cy:run": "npx cypress run",
+    "test:ci": "start-server-and-test dev http://localhost:8080 cy:run",
     "dev": "npm run lint && webpack-dev-server --open --mode development --hot",
     "deploy": "npm run lint && webpack --mode production",
     "deploy:gh": "npm run deploy && gh-pages -d dist"
