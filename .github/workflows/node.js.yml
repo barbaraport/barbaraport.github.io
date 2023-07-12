@@ -53,7 +53,7 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
             - run: npm install
-            - run: npx webpack-dev-server --open --mode development
+            - run: npx webpack-dev-server --open --mode development & wait-on http://localhost:8080
             - run: npm run test:ci
 
     deploy:
