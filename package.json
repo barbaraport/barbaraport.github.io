@@ -11,6 +11,7 @@
     "cy:run": "npx cypress run",
     "test:ci": "cy:run",
     "dev": "npm run lint && webpack-dev-server --open --mode development --hot",
+    "dev:ci": "webpack-dev-server --open --mode development",
     "deploy": "npm run lint && webpack --mode production",
     "deploy:gh": "npm run deploy && gh-pages -d dist"
   },
