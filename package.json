@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "npx tsc && eslint ./src",
     "cy:run": "npx cypress run",
-    "test:ci": "start-server-and-test webpack-dev-server --open --mode development http://localhost:8080 cy:run",
+    "test:ci": "cy:run",
     "dev": "npm run lint && webpack-dev-server --open --mode development --hot",
     "deploy": "npm run lint && webpack --mode production",
     "deploy:gh": "npm run deploy && gh-pages -d dist"
