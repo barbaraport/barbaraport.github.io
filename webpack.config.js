@@ -1,11 +1,8 @@
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import path from "path";
-import { fileURLToPath } from "url";
+/* eslint-disable @typescript-eslint/no-var-requires */
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("node:path");
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-export default {
+module.exports = {
   mode: "development",
   entry: "./src/main.tsx",
   output: {
@@ -14,11 +11,12 @@ export default {
   },
   devServer: {
     static: "./dist",
+    port: process.env.PORT
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(tsx|ts)$/,
         exclude: /node_modules/,
         use: "ts-loader",
       },
@@ -33,7 +31,7 @@ export default {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".js"],
+    extensions: [".ts", ".tsx", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({

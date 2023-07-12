@@ -33,7 +33,7 @@ export const Footer = (): JSX.Element => {
                     <GitHubIcon color="secondary" />
                 </IconButton>
             </Box>
-            <Text type="body1" color="text.secondary">
+            <Text id={'text-footer'} type="body1" color="text.secondary">
                 Made with 💖 by Bárbara Port
             </Text>
         </Box>
