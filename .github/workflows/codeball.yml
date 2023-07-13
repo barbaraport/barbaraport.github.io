@@ -1,20 +1,20 @@
-name: Codeball
+name: Codeball Code Review
 on:
-  pull_request: {}
-  pull_request_review_comment:
-    types: [created, edited]
+    pull_request: {}
+    pull_request_review_comment:
+        types: [created, edited]
 
 jobs:
-  codeball_job:
-    runs-on: ubuntu-latest
-    name: Codeball
-    steps:
-      - name: Codeball
-        uses: sturdy-dev/codeball-action@v2
-        with:
-          approvePullRequests: "true"
-          approveThreshold: "0.500"
-          labelPullRequestsWhenApproved: "true"
-          labelPullRequestsWhenReviewNeeded: "true"
-          labelPullRequestsWhenCarefulReviewNeeded: "true"
-          failJobsWhenReviewNeeded: "false"
+    codeball_job:
+        runs-on: ubuntu-latest
+        name: Codeball
+        steps:
+            - name: Codeball
+              uses: sturdy-dev/codeball-action@v2
+              with:
+                  approvePullRequests: "true"
+                  approveThreshold: "0.500"
+                  labelPullRequestsWhenApproved: "true"
+                  labelPullRequestsWhenReviewNeeded: "true"
+                  labelPullRequestsWhenCarefulReviewNeeded: "true"
+                  failJobsWhenReviewNeeded: "false"
