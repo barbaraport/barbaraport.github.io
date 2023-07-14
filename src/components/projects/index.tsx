@@ -15,7 +15,12 @@ export const MyProjects = (): JSX.Element => {
         const fetchedRepositories: Array<GitHubRepository> =
             await fetchRepositories()
 
-        setRepositories(fetchedRepositories)
+        const sortedRepositories: Array<GitHubRepository> =
+            fetchedRepositories.sort((repo_1, repo_2) =>
+                repo_1.stargazers_count > repo_2.stargazers_count ? -1 : 1
+            )
+
+        setRepositories(sortedRepositories)
     }
 
     const getItems = (): Array<JSX.Element> => {
